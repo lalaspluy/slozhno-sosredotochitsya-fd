@@ -2,84 +2,139 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: url("../images/cover-image-dark.png");
-  background-color: var(--bg-color);
+  background-image: var(--bg-image, url("../images/cover-image-dark.png"));
+  background-color: var(--bg-color, #010028);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  font-family: var(--main-font-family), sans-serif;
-  font-size: var(--main-text-size);
-  letter-spacing: 0.07em;
+  font-family: var(--main-font-family, sans-serif);
+  font-size: var(--main-text-size, 18px);
 }
 
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  /*grid-template-rows: 1fr min-content 1fr;*/
+  grid-template-rows: 1fr min-content 1fr;
   position: relative;
-  padding: 75px 10px;
+  padding: 10px;
   block-size: 100vh;
   min-block-size: 668px;
 }
 
+.decorated-zone::after {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-inline-end: 1px solid var(--decor-accent-color, #FF0070);
+  border-block-start: 1px solid var(--decor-accent-color, #FF0070);
+}
+
+.decorated-zone::before {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  border-inline-start: 1px solid var(--decor-accent-color, #FF0070);
+  border-block-end: 1px solid var(--decor-accent-color, #FF0070);
+}
+
 .header__decor-span {
   position: absolute;
-  top: 10px;
+  display: inline-block;
+  top: 12px;
   right: 19px;
-  color: var(--accent-color);
+  color: var(--accent-color, #FF0070);
+  text-align: center;
+  line-height: 25px;
+}
+
+.header__decor-span::after {
+  content: "";
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 100%;
+  background-color: var(--accent-color, #FF0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
+  margin-inline-start: 12px;
+  margin-block-end: 2px;
 }
 
 .header__theme-menu {
   justify-self: end;
-  align-self: start;
-  color: var(--accent-color);
+  align-self: center;
+  color: var(--text-accent-color, #FF0070);
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
   border-radius: 0;
   border: none;
+  border-block-end: 1px solid transparent;
+  padding: 4px 13px 3px 13px;
   text-transform: lowercase;
+  line-height: 1;
 }
 
-/*.header__title {
-  color: var(--main-title-color);
-  font-size: var(--h1-font-size);
-}*/
-
-.accent-title {
-  color: var(--main-title-color);
-  font-size: var(--h1-font-size);
+.header__theme-menu-button_active {
+  outline: 1px solid var(--text-accent-color, #FF0070);
 }
 
-.header__description_text {
-  color: var(--accent-contrast-color);
-  line-height: var(--text-line-height);
-  font-weight: bold;
-  background: var(--accent-color);
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  outline: 1px solid var(--color-shadow);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid var(--text-accent-color, #FF0070);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.accent-main-title {
+  color: var(--main-title-color);
+  font-size: var(--h1-font-size);
+  line-height: 0.825;
+}
+
+.header__title.accent-main-title {
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
+}
+
+.header__description {
   justify-self: end;
   align-self: center;
-  letter-spacing: 0.05em;
-  /*padding-inline-end: 0em;*/
+}
+
+.accent-subtitle {
+  color: var(--accent-contrast-color);
+  line-height: var(--text-line-height);
+  background: var(--accent-color, #FF0070);
+  font-size: inherit;
 }
 
 .main {
   line-height: var(--text-line-height);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(315px, 650px));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 650px));
   gap: 50px;
   color: var(--text-color);
   margin-block: 40px;
   padding-inline: 10px;
-  word-spacing: 0.2em;
-
-}
-
-.content__title {
-  font-size: inherit;
-  color: var(--accent-color);
-  /*margin-block-end: 20px;*/
 }
 
 .content {
@@ -87,44 +142,80 @@
   gap: 20px;
 }
 
-.content__section {
+.content__title {
+  font-size: inherit;
+  color: var(--text-accent-color, #FF0070);
+}
+
+.content__section,
+.content__subsection {
   display: grid;
   gap: 20px;
 }
 
-.content__subtitle {
-  font-size: inherit;
-  color: var(--accent-contrast-color);
-  background-color: var(--accent-color);
-}
-
-.content__text-wrap {
+.content__section_part,
+.content__subsection_part {
   display: grid;
-  gap: 20px;
+  gap: 10px;
 }
 
-.content__subtitle-item {
-  font-size: inherit;
-  color: var(--accent-contrast-color);
-  background-color: var(--accent-color);
-  font-weight: 400;
+.accent-subtitle-item {
+  font-weight: normal;
 }
 
 .content__text {
-  letter-spacing: 0.077em;
+
 }
 
 .content__text_link {
   
 }
+.content__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
 
+.content__gallery-image {
+  inline-size: 100%;
+}
 .footer {
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
+  position: relative;
 }
 
 .footer__title {
   justify-self: center;
   align-self: center;
+}
+
+.footer__title.accent-main-title {
+  text-shadow: 2px 2px var(--accent-color, #FF0070);
+}
+
+@media (width >= 768px) {
+
+  .accent-main-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .content__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+  
+  .content__gallery-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-image_row2{
+    grid-row: auto / span 2;
+  }
+  .gallery-image_col2 {
+    grid-column: auto / span 2;
+  }
 }
