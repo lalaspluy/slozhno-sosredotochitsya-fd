@@ -17,6 +17,7 @@
   --decor-accent-color: #FF0070;
   --text-accent-color: #FF0070;
   --accent-contrast-color: #000028;
+  --color-shadow: #FF007066;
 }
 
 @media (prefers-color-scheme: light) {

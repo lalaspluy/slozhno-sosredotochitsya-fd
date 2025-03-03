@@ -47,19 +47,19 @@
         </ul>
       </nav>
       <h1 class="header__title accent-main-title">no focus</h1>
-      <h3 class="header__description accent-subtitle">
-        <p class="header__description_text">Что делать, когда не можешь делать ничего</p>
-        <p class="header__description_text">Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
-      </h3>
+      <div class="header__description">
+        <h3 class="header__description-text accent-subtitle">Что делать, когда не можешь делать ничего</h3>
+        <h3 class="header__description-text accent-subtitle">Или почему нам так сложно сконцентрироваться, особенно когда очень надо</h3>
+      </в>
       <div class="header__decor_start decor-start"></div>
     </header>
     <main class="main">
-      <article class="content">
+      <article class="content content_col2">
         <h2 class="content__title">Почему сосредоточиться так сложно</h2>
         <section class="content__section">
           <section class="content__section_part">
             <h3 class="content__subtitle accent-subtitle">Многозадачность</h3>
-            <p class="content__text">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a href="https://dana.org/article/multicosts-of-multitasking/" class="content__text_link">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
+            <p class="content__text">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a href="https://dana.org/article/multicosts-of-multitasking/" target="_blank" class="content__text_link">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
           </section>
           <section class="content__section_part">
             <h3 class="content__subtitle accent-subtitle">Дофамин</h3>
@@ -67,7 +67,7 @@
           </section>
         </section>
       </article>
-      <article class="content">
+      <article class="content content_col1-to-3">
         <h2 class="content__title">Что снижает концентрацию внимания?</h2>
         <section class="content__section">
           <section class="content__section_part">
@@ -84,7 +84,7 @@
           </section>
         </section>
       </article>
-      <article class="content">
+      <article class="content content_col2">
         <h2 class="content__title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
         <section class="content__section">
           <h3 class="content__subtitle accent-subtitle">5 простых (на самом деле не очень) советов</h3>
@@ -99,7 +99,7 @@
             </section> 
             <section class="content__subsection_part">
               <h4 class="content__subtitle accent-subtitle accent-subtitle-item">Прогуляйтесь</h4>
-              <p class="content__text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" class="content__text_link">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
+              <p class="content__text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank" class="content__text_link">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
             </section> 
             <section class="content__subsection_part">
               <h4 class="content__subtitle accent-subtitle accent-subtitle-item">Хорошо ешьте</h4>
@@ -112,41 +112,41 @@
           </section>
         </section>
       </article>
-      <article class="content content-img">
-        <h3 class="content__subtitle accent-subtitle">А можно в картинках?</h3>
-        <section class="content__gallery">
+      <section class="content-img">
+        <h3 class="content-img__title accent-subtitle">А можно в картинках?</h3>
+        <section class="content-img__gallery">
           <img
             src="../images/sunset.png"
             alt="Картинка с закатным солцем, уходящим за горы"
-            class="content__gallery-image gallery-image_col2
+            class="content-img__gallery-image gallery-image_col2"
             loading="lazy"
           />
           <img
             src="../images/ice-cream.png"
             alt="Картинка с большой тарелкой мультяшного мороженого"
-            class="content__gallery-image gallery-image_row2"
+            class="content-img__gallery-image gallery-image_row2"
             loading="lazy"
           />
           <img
             src="../images/tape.png"
             alt="Картинка с магнитофонной касетой"
-            class="content__gallery-image gallery-image_row2"
+            class="content-img__gallery-image gallery-image_row2"
             loading="lazy"
           />
           <img
             src="../images/books.png"
             alt="Картинка со стопкой книг и чашкой кофе сверху"
-            class="content__gallery-image"
+            class="content-img__gallery-image"
             loading="lazy"
           />
           <img
             src="../images/street.png"
             alt="Картинка с пустой городской улицей"
-            class="content__gallery-image gallery-image_col2"
+            class="content-img__gallery-image gallery-image_col2"
             loading="lazy"
           />
         </section>
-      </article>
+      </section>
     </main>
     <footer class="footer decorated-zone">
       <h2 class="footer__title accent-main-title">focus</h2>
