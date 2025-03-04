@@ -7,15 +7,11 @@
 :root.theme-dark {
   --bg-image: url("../images/cover-image-dark.png");
   --bg-color: #000028;
-  --text-color: #F1B2CE;
-  --main-title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --decor-accent-color: #FF0070;
-  --text-accent-color: #FF0070;
+  --text-color: #f1b2ce;
+  --main-title-color: #db00ff;
+  --accent-color: #ff0070;
+  --decor-color: #ff0070;
+  --text-accent-color: #ff0070;
   --accent-contrast-color: #000028;
-  --color-shadow: #FF007066;
-}
-
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --color-shadow: #ff007066;
 }

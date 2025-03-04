@@ -6,18 +6,14 @@
 
 :root.theme-light {
   --bg-image: url("../images/cover-image-light.png");
-  --bg-color: #FFF1F7;
+  --bg-color: #fff1f7;
   --text-color: #353430;
-  --main-title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --decor-accent-color: #353430;
+  --main-title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --decor-color: #353430;
   --text-accent-color: #353430;
   --accent-contrast-color: #353430;
-  --color-shadow: #32312D66;
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --color-shadow: #32312d66;
 }
 
 .theme-light .header__decor-span {

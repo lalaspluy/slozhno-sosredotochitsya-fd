@@ -1,39 +1,42 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
-  --main-font-family: 'IBM Plex mono';
+  /*Шрифт*/
+  --main-font-family: "IBM Plex mono";
   --main-text-size: 18px;
   --text-line-height: 23.4px;
   --h1-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --padding-page-change: clamp(10px, 0.0297rem + 2.54vw, 20px);
 
-  --bg-image: url("../images/cover-image-dark.png");
+  /*Цвет и фон*/
+  --bg-image: url("./images/cover-image-dark.png");
   --bg-color: #000028;
-  --text-color: #F1B2CE;
-  --main-title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --decor-accent-color: #FF0070;
-  --text-accent-color: #FF0070;
+  --text-color: #f1b2ce;
+  --main-title-color: #db00ff;
+  --accent-color: #ff0070;
+  --decor-color: #ff0070;
+  --text-accent-color: #ff0070;
   --accent-contrast-color: #000028;
-  --color-shadow: #FF007066;
+  --color-shadow: #ff007066;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url("../images/cover-image-light.png");
-    --bg-color: #FFF1F7;
+    --bg-color: #fff1f7;
     --text-color: #353430;
-    --main-title-color: #FFC2E6;
-    --accent-color: #FF8DCB;
-    --decor-accent-color: #353430;
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --decor-color: #353430;
     --text-accent-color: #353430;
     --accent-contrast-color: #353430;
-    --color-shadow: #32312D66;
+    --color-shadow: #32312d66;
   }
 
   .theme-auto .header__decor-span {
     display: none;
+  }
+}
+
+@media (width >= 768px) {
+  :root {
+    --h1-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
