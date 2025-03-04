@@ -1,0 +1,1 @@
+git@github.com:lalaspluy/slozhno-sosredotochitsya-fd.git
