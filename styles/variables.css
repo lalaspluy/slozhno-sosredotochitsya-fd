@@ -6,7 +6,7 @@
   --h1-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
   /*Цвет и фон*/
-  --bg-image: url("./images/cover-image-dark.png");
+  --bg-image: url("../images/cover-image-dark.png");
   --bg-color: #000028;
   --text-color: #f1b2ce;
   --main-title-color: #db00ff;
@@ -15,24 +15,6 @@
   --text-accent-color: #ff0070;
   --accent-contrast-color: #000028;
   --color-shadow: #ff007066;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-image: url("../images/cover-image-light.png");
-    --bg-color: #fff1f7;
-    --text-color: #353430;
-    --main-title-color: #ffc2e6;
-    --accent-color: #ff8dcb;
-    --decor-color: #353430;
-    --text-accent-color: #353430;
-    --accent-contrast-color: #353430;
-    --color-shadow: #32312d66;
-  }
-
-  .theme-auto .header__decor-span {
-    display: none;
-  }
 }
 
 @media (width >= 768px) {

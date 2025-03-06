@@ -1,7 +1,7 @@
 /* Основные стили проекта. Сначала для mobile */
 
 .page {
-  font-family: var(--main-font-family, sans-serif);
+  font-family: var(--main-font-family, monospace);
   font-size: var(--main-text-size, 18px);
   background-color: var(--bg-color, #010028);
   background-image: var(--bg-image, url("../images/cover-image-dark.png"));
@@ -51,6 +51,7 @@
   color: var(--accent-color, #ff0070);
   line-height: 25px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .header__decor-span::after {
@@ -123,6 +124,7 @@
 
 .accent-subtitle {
   color: var(--accent-contrast-color);
+  font-weight: bold;
   font-size: inherit;
   line-height: var(--text-line-height);
   background: var(--accent-color, #ff0070);
@@ -149,14 +151,19 @@
 }
 
 .content__block-wrap,
-.content__subblock-wrap {
+.content__article-list {
   display: grid;
   gap: 20px;
 }
 
-.content__section {
+.content__article,
+.content__article-item {
   display: grid;
   gap: 10px;
+}
+
+.content-goldenfish .content__article {
+  gap: 20px;
 }
 
 h4.accent-subtitle {
@@ -181,6 +188,11 @@ h4.accent-subtitle {
   outline: 1px solid var(--text-color);
 }
 
+.content-img {
+  display: grid;
+  gap: 10px;
+}
+
 .content-img__gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -189,6 +201,8 @@ h4.accent-subtitle {
 
 .content-img__gallery-image {
   display: block;
+  object-fit: cover;
+  block-size: 100%;
   inline-size: 100%;
 }
 
@@ -263,7 +277,7 @@ h4.accent-subtitle {
     grid-column: 1 / 4;
   }
 
-  .content__section.content-img {
+  .content-img {
     gap: 20px;
   }
 
@@ -273,16 +287,13 @@ h4.accent-subtitle {
     gap: 20px;
   }
 
-  .content-img__gallery-image {
-    object-fit: cover;
-    block-size: 100%;
-  }
-
-  .gallery-image_row2 {
+  .gallery-image-ice-cream,
+  .gallery-image-tape {
     grid-row: auto / span 2;
   }
 
-  .gallery-image_col2 {
+  .gallery-image-sunset,
+  .gallery-image-street {
     grid-column: auto / span 2;
   }
 }

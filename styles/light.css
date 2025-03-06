@@ -19,3 +19,21 @@
 .theme-light .header__decor-span {
   display: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --bg-image: url("../images/cover-image-light.png");
+    --bg-color: #fff1f7;
+    --text-color: #353430;
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --decor-color: #353430;
+    --text-accent-color: #353430;
+    --accent-contrast-color: #353430;
+    --color-shadow: #32312d66;
+  }
+
+  .theme-auto .header__decor-span {
+    display: none;
+  }
+}
