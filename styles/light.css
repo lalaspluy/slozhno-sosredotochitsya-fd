@@ -36,4 +36,8 @@
   .header__decor-span {
     display: none;
   }
+
+  .theme-dark .header__decor-span {
+    display: block;
+  }
 }
